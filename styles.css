@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --header-font: "Josefin Slab", serif;
+  --p-font: "Yellowtail", cursive;
+  --header-color: rgb(23, 97, 11);
+  --h3-text-color: #f7f7f7;
+  --header-color-opacity: rgba(23, 97, 11, 0.5);
+}
+
+/*  Start Utilites */
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 3px solid black; */
+  letter-spacing: 1.5px;
+  line-height: 2;
+}
+
+figcaption {
+  text-align: center;
+  font-family: var(--header-font);
+  margin: 20px 0;
+  background-color: #f7f7f7;
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  color: var(--header-color);
+  font-weight: 700;
+}
+
+hr {
+  width: 50%;
+  margin: 80px auto;
+  border: none;
+  height: 5px;
+  background-color: green;
+}
+
+img {
+  display: block;
+}
+
+body {
+  background-image: url(./Seamus\ On\ Rock\ Landscape\ copy.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.home {
+  display: inline-block;
+  background-color: var(--header-color);
+  width: 6rem;
+  height: auto;
+  text-align: center;
+  text-wrap: balance;
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-radius: 10px;
+}
+
+p,
+li {
+  font-family: var(--p-font);
+  font-size: clamp(20px, 3vw, 2rem);
+  text-wrap: balance;
+  color: var(--header-color);
+}
+
+nav {
+  display: flex;
+  height: 10rem;
+  justify-content: center;
+  align-items: flex-end;
+  filter: blur(0.5px);
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  list-style: none;
+  margin-left: 1rem;
+}
+
+a {
+  color: #e5dede;
+  text-decoration: none;
+  font-family: var(--header-font);
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--header-font);
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  text-align: center;
+  text-wrap: balance;
+  color: var(--header-color);
+}
+
+/* End Of Utilites */
+
+.main__page-hero {
+  display: grid;
+  place-items: center;
+  height: 100dvh;
+  width: 90%;
+  margin: 20px auto;
+  position: relative;
+}
+
+.main__page-hero h1 {
+  font-family: var(--header-font);
+  color: #f7f7f7;
+  font-size: 6rem;
+  margin-top: 20px;
+  filter: drop-shadow(2px 2px 2px rgb(248, 247, 247));
+  position: absolute;
+  top: 150px;
+}
+
+.main__page-hero button {
+  background-color: #f7f7f7;
+  width: auto;
+  height: 100px;
+  font-family: var(--header-font);
+  font-size: 1.2rem;
+  border: none;
+  padding: 20px 30px;
+  border-radius: 10px;
+  border: var(--header-color) 2px solid;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.main__page-hero button:hover {
+  background-color: var(--header-color);
+  border: 2px solid #f7f7f7;
+  color: #f7f7f7;
+  cursor: pointer;
+  transition: 1.5s;
+}
+
+/* About Section */
+
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.about-wrapper img {
+  width: 31.35rem;
+  height: auto;
+  margin: 0 auto;
+}
+
+.about-wrapper h2 {
+  text-align: center;
+  font-size: 4rem;
+  animation: about-h2 3s ease forwards;
+}
+
+.about-wrapper p {
+  text-align: center;
+}
+
+.about-wrapper ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.what-i-love li {
+  color: var(--header-color);
+}
+
+/* Gallery */
+
+.gallery-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.gallery {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.gallery img {
+  display: flex;
+  width: 6.25rem;
+  height: 300px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  border-radius: 10px;
+  transition: ease 1.5s;
+}
+
+.gallery img:hover {
+  filter: grayscale(0%);
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* 768px to 991.98px Tablet */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  body {
+    background-image: url(./Seamus\ on\ rock\ resized.jpeg);
+    background-repeat: no-repeat;
+    min-height: 100dvh;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    aspect-ratio: 1/1;
+  }
+
+  .about-wrapper {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5px;
+  }
+
+  .about-wrapper h3 {
+    margin: 50px auto;
+    text-decoration: underline;
+    background-color: var(--header-color);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    color: var(--h3-text-color);
+  }
+  .about-wrapper ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+    height: 37.5rem;
+  }
+
+  .about-wrapper li {
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    text-wrap: balance;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-wrapper li:nth-child(odd) {
+    background-color: var(--header-color);
+    color: var(--h3-text-color);
+  }
+
+  .about-wrapper img {
+    margin: 0 auto;
+    border: var(--header-color) 3px dashed;
+    padding: 5px;
+  }
+
+  .about-wrapper p {
+    text-align: center;
+  }
+
+  .gallery-wrapper {
+    display: flex;
+  }
+
+  .gallery {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+
+  .gallery img {
+    /* aspect-ratio: 3/2; */
+    width: 300px;
+    height: auto;
+    /* margin: 0 auto; */
+    object-fit: contain;
+    overflow: hidden;
+    filter: grayscale(100%);
+    border-radius: 10px;
+    transition: ease-in-out 1.5s;
+  }
+
+  .gallery img:is(:hover, :active) {
+    filter: grayscale(0%);
+    margin: 50px auto;
+  }
+
+  figcaption {
+    display: none;
+  }
+}
+
+/* Under 768px Mobile */
+
+@media (max-width: 768px) {
+  body {
+    background-image: url(./Seamus\ on\ rock\ resized.jpeg);
+    background-repeat: no-repeat;
+    min-height: 100dvh;
+    object-fit: cover;
+    background-position: center;
+    aspect-ratio: 1/1;
+  }
+
+  .main__page-hero {
+    margin: 10px 0;
+  }
+
+  .about-wrapper {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-wrapper ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+    height: 600px;
+  }
+
+  .about-wrapper li {
+    text-align: center;
+    width: 90%;
+    height: 200px;
+    text-wrap: balance;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-wrapper li:nth-child(even) {
+    background-color: var(--header-color);
+    color: var(--h3-text-color);
+  }
+
+  .about-wrapper h2 {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .about-wrapper img {
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px;
+    border: var(--header-color) 3px dashed;
+    object-fit: contain;
+  }
+
+  .about-wrapper h3 {
+    margin: 50px auto;
+    text-decoration: underline;
+    background-color: var(--header-color);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    color: var(--h3-text-color);
+  }
+
+  .about-wrapper h3:is(:hover, :active) {
+    background-color: #ffffff;
+    color: var(--header-color);
+    transition: all 2s;
+    border: var(--header-color) 3px solid;
+  }
+
+  .about-wrapper p {
+    margin: 20px auto;
+    text-align: center;
+    width: 90%;
+  }
+
+  .what-i-love img {
+    aspect-ratio: 1/1;
+  }
+
+  .gallery-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .gallery img {
+    aspect-ratio: 3/2;
+    width: 80%;
+    height: 100%;
+    margin: 30px auto;
+    object-fit: fill;
+    overflow: hidden;
+    filter: grayscale(100%);
+    border-radius: 10px;
+    transition: ease-in-out 1.5s;
+    padding: 2px;
+    border: var(--header-color) 2px dashed;
+  }
+
+  .gallery img:is(:hover, :active) {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    margin: 50px auto;
+  }
+}
+
+/* Animations */
+
+@keyframes about-h2 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    text-decoration: underline;
+  }
+}
